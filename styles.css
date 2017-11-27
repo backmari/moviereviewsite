@@ -1,0 +1,19 @@
+.movieBody {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffd24f
+}
+
+.movieBody div {
+    margin: 20px;
+}
+
+.movieImage {
+    max-width: 200px;
+}
+
+.movieText {
+    flex-grow: 1;
+}
