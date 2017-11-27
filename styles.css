@@ -32,3 +32,7 @@ body {
 .rating .filledStar {
     color: black;
 }
+
+.rating .hoverStar {
+    color: #7EFF63;
+}

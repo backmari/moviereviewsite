@@ -1,34 +1,57 @@
 function renderMovie(movie) {
-    document.getElementById("moviePoster").src = movie.imgUrl;
-    document.querySelector(".movieText h2").innerText = movie.title;
-    document.querySelector(".movieText p").innerText = movie.description;
-    let listNode = document.querySelector(".movieText ul");
+    $("#moviePoster").attr("src", movie.imgUrl);
+    $(".movieText h2").text(movie.title);
+    $(".movieText p").text(movie.description);
     movie.actors.forEach(element => {
-        let actorNode = document.createElement("li");
-        actorNode.innerText = element;
-        listNode.appendChild(actorNode);
+        let actorNode = $("<li>");
+        actorNode.text(element);
+        $(".movieText ul").append(actorNode);
     });
 
 }
 
 function changeStarRating(grade) {
     for (let index = 1; index <= 5; index++) {
-        let starId = "star" + index;
-        let starNode = document.getElementById(starId);
+        let starId = "#star" + index;
         if (index <= grade) {
-            starNode.classList.add("filledStar");
+            $(starId).addClass("filledStar");
         }
         else {
-            starNode.classList.remove("filledStar");
+            $(starId).removeClass("filledStar");
         }
     }
 }
 
-document.getElementById("star1").addEventListener("click", function() { changeStarRating(1); });
-document.getElementById("star2").addEventListener("click", function() { changeStarRating(2); });
-document.getElementById("star3").addEventListener("click", function() { changeStarRating(3); });
-document.getElementById("star4").addEventListener("click", function() { changeStarRating(4); });
-document.getElementById("star5").addEventListener("click", function() { changeStarRating(5); });
+function mouseEnterStarRating(grade) {
+    for (let index = 1; index <= 5; index++) {
+        let starId = "#star" + index;
+        if (index <= grade) {
+            $(starId).addClass("hoverStar");
+        }
+    }
+}
+
+function mouseLeaveStarRating(grade) {
+    for (let index = 1; index <= 5; index++) {
+        let starId = "#star" + index;
+        $(starId).removeClass("hoverStar");
+    }
+}
+
+$(".rating").on("click", "span", function(e) {
+    let grade = $(e.target).attr("star-rating");
+    changeStarRating(grade);
+});
+
+$(".rating").on("mouseenter", "span", function(e) {
+    let grade = $(e.target).attr("star-rating");
+    mouseEnterStarRating(grade);
+});
+
+$(".rating").on("mouseleave", "span", function(e) {
+    let grade = $(e.target).attr("star-rating");
+    mouseLeaveStarRating(grade);
+});
 
 renderMovie(movieData);
 changeStarRating(3);
