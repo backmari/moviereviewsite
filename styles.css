@@ -1,3 +1,7 @@
+body {
+    background-color: #B28268;
+}
+
 .movieBody {
     margin: 0 auto;
     max-width: 800px;
@@ -16,4 +20,15 @@
 
 .movieText {
     flex-grow: 1;
+}
+
+.rating span {
+    user-select: none;
+    cursor: pointer;
+    color: gray;
+    font-size: x-large;
+}
+
+.rating .filledStar {
+    color: black;
 }
