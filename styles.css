@@ -1,38 +1,31 @@
 body {
-    background-color: #B28268;
+  background-color: #B28268;
 }
-
 .movieBody {
-    margin: 0 auto;
-    max-width: 800px;
-    display: flex;
-    flex-direction: row;
-    background-color: #FFCAAE;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  background-color: #FFCAAE;
 }
-
 .movieBody div {
-    margin: 20px;
+  margin: 20px;
 }
-
 .movieImage {
-    max-width: 200px;
+  max-width: 200px;
 }
-
 .movieText {
-    flex-grow: 1;
+  flex-grow: 1;
 }
-
 .rating span {
-    user-select: none;
-    cursor: pointer;
-    color: gray;
-    font-size: x-large;
+  user-select: none;
+  cursor: pointer;
+  color: gray;
+  font-size: x-large;
 }
-
 .rating .filledStar {
-    color: black;
+  color: black;
 }
-
 .rating .hoverStar {
-    color: #7EFF63;
+  color: yellow;
 }

@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "lessc styles.less styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backmari/moviereviewsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/backmari/moviereviewsite/issues"
+  },
+  "homepage": "https://github.com/backmari/moviereviewsite#readme",
+  "devDependencies": {
+    "less": "^2.7.3"
+  }
+}
