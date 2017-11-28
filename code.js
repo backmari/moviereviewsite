@@ -1,5 +1,5 @@
-import {movieData} from './data';
-import $ from 'jquery';
+import {movieData} from "./data";
+import $ from "jquery";
 
 function renderMovie(movie) {
     $("#moviePoster").attr("src", movie.imgUrl);
@@ -10,7 +10,6 @@ function renderMovie(movie) {
         actorNode.text(element);
         $(".movieText ul").append(actorNode);
     });
-
 }
 
 function changeStarRating(grade) {
@@ -34,7 +33,7 @@ function mouseEnterStarRating(grade) {
     }
 }
 
-function mouseLeaveStarRating(grade) {
+function mouseLeaveStarRating() {
     for (let index = 1; index <= 5; index++) {
         let starId = "#star" + index;
         $(starId).removeClass("hoverStar");
@@ -51,9 +50,8 @@ $(".rating").on("mouseenter", "span", function(e) {
     mouseEnterStarRating(grade);
 });
 
-$(".rating").on("mouseleave", "span", function(e) {
-    let grade = $(e.target).attr("star-rating");
-    mouseLeaveStarRating(grade);
+$(".rating").on("mouseleave", "span", function() {
+    mouseLeaveStarRating();
 });
 
 renderMovie(movieData);

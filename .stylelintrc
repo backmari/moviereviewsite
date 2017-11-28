@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "max-empty-lines": 4,
+    "no-duplicate-selectors": true,
+    "no-eol-whitespace": true,
+    "no-missing-end-of-source-newline": true
+  }
+}

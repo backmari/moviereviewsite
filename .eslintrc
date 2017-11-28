@@ -1,0 +1,12 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "quotes": ["error", "double"],
+        "comma-spacing": [1, {"after": true}],
+        "indent": ["error", 4]
+    }
+  }

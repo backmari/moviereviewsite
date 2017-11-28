@@ -11,10 +11,10 @@ body {
     display: flex;
     flex-direction: row;
     background-color: @moviebgcolor;
-}
 
-.movieBody div {
-    margin: 20px;
+    div {
+        margin: 20px;
+    }
 }
 
 .movieImage {
@@ -25,17 +25,19 @@ body {
     flex-grow: 1;
 }
 
-.rating span {
-    user-select: none;
-    cursor: pointer;
-    color: gray;
-    font-size: x-large;
-}
+.rating {
+    span {
+        user-select: none;
+        cursor: pointer;
+        color: gray;
+        font-size: x-large;
+    }
 
-.rating .filledStar {
-    color: black;
-}
+    .filledStar {
+        color: black;
+    }
 
-.rating .hoverStar {
-    color: yellow;
+    .hoverStar {
+        color: yellow;
+    }
 }
