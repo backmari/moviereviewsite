@@ -9,7 +9,8 @@
     "less": "lessc styles.less distribution/styles.css",
     "bundle": "webpack",
     "copyindex": "cp index.html distribution/index.html",
-    "build": "npm run lintless && npm run lintjs && npm run bundle && npm run less && npm run copyindex"
+    "build": "npm run lintless && npm run lintjs && npm run bundle && npm run less && npm run copyindex",
+    "lint": "npm run lintless && npm run lintjs"
   },
   "repository": {
     "type": "git",
