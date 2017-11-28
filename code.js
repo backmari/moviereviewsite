@@ -1,3 +1,6 @@
+import {movieData} from './data';
+import $ from 'jquery';
+
 function renderMovie(movie) {
     $("#moviePoster").attr("src", movie.imgUrl);
     $(".movieText h2").text(movie.title);
