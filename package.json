@@ -5,12 +5,12 @@
   "main": "code.js",
   "scripts": {
     "lintless": "stylelint styles.less",
-    "lintjs": "eslint .",
+    "lintts": "tslint -c tslint.json '*.ts'",
     "less": "lessc styles.less distribution/styles.css",
     "bundle": "webpack",
     "copyindex": "cp index.html distribution/index.html",
-    "build": "npm run lintless && npm run lintjs && npm run bundle && npm run less && npm run copyindex",
-    "lint": "npm run lintless && npm run lintjs"
+    "build": "npm run lintless && npm run lintts && npm run bundle && npm run less && npm run copyindex",
+    "lint": "npm run lintless && npm run lintts"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/backmari/moviereviewsite#readme",
   "devDependencies": {
-    "eslint": "^4.12.0",
     "less": "^2.7.3",
     "stylelint": "^8.3.1",
+    "ts-loader": "^3.1.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
     "webpack": "^3.8.1"
   },
   "dependencies": {
