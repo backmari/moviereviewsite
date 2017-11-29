@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/backmari/moviereviewsite#readme",
   "devDependencies": {
+    "@types/angular": "^1.6.39",
     "@types/jquery": "^3.2.16",
     "less": "^2.7.3",
     "stylelint": "^8.3.1",
@@ -32,6 +33,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
+    "angular": "^1.6.7",
     "jquery": "^3.2.1"
   }
 }

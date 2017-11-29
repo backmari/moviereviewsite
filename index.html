@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body>
+<body ng-app="reviewApp">
     <div class="movieBody">
         <div class="movieImage">
             <img id="moviePoster"/>
@@ -24,6 +24,9 @@
             </div>
             <p></p>
             <ul></ul>
+        </div>
+        <div ng-controller="reviewController" class="container">
+            {{message}}
         </div>
     </div>
     <script src="./bundle.js"></script>    

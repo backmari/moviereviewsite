@@ -1,6 +1,13 @@
+import * as angular from "angular";
 import * as $ from "jquery";
 import {movieData} from "./data";
 import {Review} from "./interfaces";
+
+const app = angular.module("reviewApp", []);
+
+app.controller("reviewController", ($scope) => {
+  $scope.message = "Powered by AngularJS";
+});
 
 function renderMovie(movie: Review) {
     $("#moviePoster").attr("src", movie.imgUrl);
