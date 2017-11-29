@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body ng-app="reviewApp">
-    <div class="movieBody">
+<body ng-app="reviewApp" ng-cloak>
+    <div class="movieBody" ng-controller="reviewController" class="container">
         <div class="movieImage">
-            <img id="moviePoster"/>
+            <img id="moviePoster" ng-src="{{movie.imgUrl}}"/>
         </div>
         <div class="movieText">
-            <h2></h2>
+            <h2>{{movie.title}}</h2>
             <div class="rating">
-                <span id="star1" star-rating="1">&#9733;</span>
-                <span id="star2" star-rating="2">&#9733;</span>
-                <span id="star3" star-rating="3">&#9733;</span>
-                <span id="star4" star-rating="4">&#9733;</span>
-                <span id="star5" star-rating="5">&#9733;</span>
+                <span id="star1" ng-class="{filledStar: rating>=1, hoverStar: hoverRating>=1}" ng-click="handleClick(1)" ng-mouseenter="handleMouseEnter(1)" ng-mouseleave="handleMouseLeave()">&#9733;</span>
+                <span id="star2" ng-class="{filledStar: rating>=2, hoverStar: hoverRating>=2}" ng-click="handleClick(2)" ng-mouseenter="handleMouseEnter(2)" ng-mouseleave="handleMouseLeave()">&#9733;</span>
+                <span id="star3" ng-class="{filledStar: rating>=3, hoverStar: hoverRating>=3}" ng-click="handleClick(3)" ng-mouseenter="handleMouseEnter(3)" ng-mouseleave="handleMouseLeave()">&#9733;</span>
+                <span id="star4" ng-class="{filledStar: rating>=4, hoverStar: hoverRating>=4}" ng-click="handleClick(4)" ng-mouseenter="handleMouseEnter(4)" ng-mouseleave="handleMouseLeave()">&#9733;</span>
+                <span id="star5" ng-class="{filledStar: rating>=5, hoverStar: hoverRating>=5}" ng-click="handleClick(5)" ng-mouseenter="handleMouseEnter(5)" ng-mouseleave="handleMouseLeave()">&#9733;</span>                
             </div>
-            <p></p>
-            <ul></ul>
-        </div>
-        <div ng-controller="reviewController" class="container">
-            {{message}}
+            <p>{{movie.description}}</p>
+            <ul>
+                <li ng-repeat="name in movie.actors">{{name}}</li>
+            </ul>
         </div>
     </div>
     <script src="./bundle.js"></script>    

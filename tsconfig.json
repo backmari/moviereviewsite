@@ -2,8 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "types": [
-      "angular",
-      "jquery"
+      "angular"
     ]
   }
 }
