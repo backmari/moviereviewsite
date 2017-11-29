@@ -1,0 +1,16 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "use-isnan": true,
+        "eofline": true,
+        "indent": [true, "spaces", 4],
+        "semicolon": [true, "always"],
+        "only-arrow-functions": false,
+        "trailing-comma": [false, {"multiline": "always", "singleline": "always"}]
+    },
+    "rulesDirectory": []
+}
