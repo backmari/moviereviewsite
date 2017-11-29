@@ -9,8 +9,8 @@
         "eofline": true,
         "indent": [true, "spaces", 4],
         "semicolon": [true, "always"],
-        "only-arrow-functions": false,
-        "trailing-comma": [false, {"multiline": "always", "singleline": "always"}]
+        "trailing-comma": [false, {"multiline": "always", "singleline": "always"}],
+        "interface-over-type-literal": false
     },
     "rulesDirectory": []
 }

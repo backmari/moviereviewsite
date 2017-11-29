@@ -1,7 +1,8 @@
 import * as $ from "jquery";
 import {movieData} from "./data";
+import {Review} from "./interfaces";
 
-function renderMovie(movie) {
+function renderMovie(movie: Review) {
     $("#moviePoster").attr("src", movie.imgUrl);
     $(".movieText h2").text(movie.title);
     $(".movieText p").text(movie.description);
@@ -39,17 +40,17 @@ function mouseLeaveStarRating() {
     }
 }
 
-$(".rating").on("click", "span", function(e) {
+$(".rating").on("click", "span", (e) => {
     const grade = $(e.target).attr("star-rating");
     changeStarRating(grade);
 });
 
-$(".rating").on("mouseenter", "span", function(e) {
+$(".rating").on("mouseenter", "span", (e) => {
     const grade = $(e.target).attr("star-rating");
     mouseEnterStarRating(grade);
 });
 
-$(".rating").on("mouseleave", "span", function() {
+$(".rating").on("mouseleave", "span", () => {
     mouseLeaveStarRating();
 });
 

@@ -1,4 +1,6 @@
-export const movieData = {
+import {Review} from "./interfaces";
+
+export const movieData: Review = {
     actors: ["Charles Grodin", "Bonnie Hunt", "Dean Jones"],
     description: "Feeling that something is lacking in their lives, the family of suburbanite Charles Grodin" +
     " adopts a stray St. Bernard puppy. The cute lite beast grows up to be the less-than-cute Beethoven, a sloppy," +
