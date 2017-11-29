@@ -54,4 +54,4 @@ $(".rating").on("mouseleave", "span", function() {
 });
 
 renderMovie(movieData);
-changeStarRating(3);
+changeStarRating(2);
